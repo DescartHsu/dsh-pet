@@ -259,7 +259,7 @@ ctx.effect(() => ctx.pet.registerPanelAction({
 | `ouo-neko` | OUO Neko | `Pessimist0906` 以 MIT 许可证贡献的粉色樱花猫耳伙伴 |
 | `whale-girl` | 鲸鱼娘（原版） | 仓库原有的鲸鱼娘图集 |
 | `whale-girl-refined` | 鲸鱼娘（精致版） | 以鲸鱼娘设计方向为基础，经 AI 辅助二次创作、修复和细节精修的衍生版本 |
-| `whale-girl-red` | 鲸鱼娘（红色） | 精致版的红白配色变体，保留全部 57 帧动画、原始节奏和图集透明度 |
+| `whale-girl-red` | 鲸鱼娘（红色） | 精致版的红白配色变体，搭配酒红浮窗和红色按钮；保留全部 57 帧动画、原始节奏和图集透明度 |
 
 ![鲸鱼娘（红色）](assets/whale-red/previews/idle.gif)
 

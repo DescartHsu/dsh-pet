@@ -259,7 +259,7 @@ Settings > Pet > Status bubbles (`auto` by default, `off` to silence the pet). `
 | `ouo-neko` | OUO Neko | Pink-sakura cat-eared companion contributed by `Pessimist0906` under MIT |
 | `whale-girl` | 鲸鱼娘（原版） | The repository's original whale-girl atlas |
 | `whale-girl-refined` | 鲸鱼娘（精致版） | An AI-assisted derivative with repaired and refined details, based on the whale-girl design direction |
-| `whale-girl-red` | 鲸鱼娘（红色） | Red-and-white recolor of the refined variant; preserves all 57 frames, timing and atlas transparency |
+| `whale-girl-red` | 鲸鱼娘（红色） | Red-and-white recolor of the refined variant with matching burgundy panels and red buttons; preserves all 57 frames, timing and atlas transparency |
 
 ![鲸鱼娘（红色）](assets/whale-red/previews/idle.gif)
 
