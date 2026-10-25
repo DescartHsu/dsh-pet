@@ -51,3 +51,17 @@ transparency, as required by the GIF format.
 
 A mount test covers switching the red surface identity back to the refined
 whale and verifies that the themed feed action still calls its handler.
+
+## Fork distribution
+
+The fork uses the version suffix `-red.1` to distinguish this build from the
+upstream npm release. Keep the canonical package name so installing the fork
+updates the same plugin. Release assets carry the built plugin tarball and a
+SHA-256 checksum. The workflow gates npm publishing to the upstream repository;
+forks can ship GitHub assets without credentials for the upstream npm scope.
+Installation instructions point to the versioned tarball rather than the
+source archive, so other machines receive compiled client code and red assets.
+
+Exclude JavaScript and declaration source maps from the release package.
+Third-party vendor maps can contain build-machine paths in their embedded
+source text; maps are unnecessary for running or installing the plugin.

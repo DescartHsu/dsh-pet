@@ -3,7 +3,8 @@ name: Release
 # Release pipeline. Pushing a vX.Y.Z tag is the single release switch, and the
 # tag is the version source of truth - the job refuses to publish when
 # package.json disagrees with it. Publishing needs the repository secret
-# NPM_TOKEN (an npm automation token for the @linxin666 scope).
+# NPM_TOKEN (an npm automation token for the @linxin666 scope). Forks only
+# build GitHub release assets; npm publishing stays with the upstream owner.
 #
 # The workflow can also be dispatched with an existing tag. That lane exists
 # because npm publish itself succeeds before the registry finishes serving the
@@ -36,7 +37,7 @@ concurrency:
 
 jobs:
   release:
-    name: Gate, publish and release
+    name: Gate, package and release
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -114,6 +115,7 @@ jobs:
       # published must not die here, because npm rejects a version that
       # already exists.
       - name: Publish to npm
+        if: github.repository == 'zhu1090093659/dsh-pet'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           VERSION: ${{ steps.release.outputs.version }}
@@ -134,6 +136,7 @@ jobs:
       # cut. A tag that fails only this step is completable from the dispatch
       # lane without re-publishing.
       - name: Verify the published version resolves
+        if: github.repository == 'zhu1090093659/dsh-pet'
         env:
           VERSION: ${{ steps.release.outputs.version }}
         run: |
@@ -150,6 +153,13 @@ jobs:
           echo "$name@$VERSION did not appear on the registry" >&2
           exit 1
 
+      - name: Package the installable plugin
+        run: |
+          set -eu
+          pnpm pack --pack-destination release-assets
+          mv release-assets/*.tgz release-assets/dsh-pet.tgz
+          (cd release-assets && sha256sum dsh-pet.tgz > SHA256SUMS)
+
       - name: Create or update the GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -158,10 +168,12 @@ jobs:
           set -eu
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release edit "$TAG" --notes-file "$RUNNER_TEMP/release-notes.md"
+            gh release upload "$TAG" release-assets/dsh-pet.tgz release-assets/SHA256SUMS --clobber
             echo "updated the existing Release $TAG"
           else
             gh release create "$TAG" \
               --title "$TAG" \
-              --notes-file "$RUNNER_TEMP/release-notes.md"
+              --notes-file "$RUNNER_TEMP/release-notes.md" \
+              release-assets/dsh-pet.tgz release-assets/SHA256SUMS
             echo "created Release $TAG"
           fi

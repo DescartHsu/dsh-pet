@@ -49,7 +49,9 @@ git push origin vX.Y.Z
 
 The tag is the release switch. `.github/workflows/release.yml` reruns the CI
 gates, refuses to publish when `package.json` disagrees with the tag, publishes
-to npm, verifies the version resolves from the registry, and creates the GitHub
-Release. It needs the repository secret `NPM_TOKEN` (an npm automation token for
-the `@linxin666` scope).
+to npm only in the upstream `zhu1090093659/dsh-pet` repository, verifies that
+version, and creates the GitHub Release with `dsh-pet.tgz` and `SHA256SUMS`.
+Forks skip npm publishing and distribute the compiled plugin through those
+GitHub attachments; no npm token is needed. Upstream npm publishing needs the
+repository secret `NPM_TOKEN` (an npm automation token for the `@linxin666` scope).
 

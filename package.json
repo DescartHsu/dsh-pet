@@ -1,7 +1,7 @@
 {
   "name": "@linxin666/dsh-pet",
   "description": "Multi-pet companion plugin for the dsh web GUI: a registry-driven floating pet that reacts to model activity, with per-pet naming, petting/feeding interactions and an affinity score",
-  "version": "0.4.8",
+  "version": "0.4.8-red.1",
   "publishConfig": {
     "access": "public"
   },
@@ -34,9 +34,7 @@
   },
   "files": [
     "lib/**/*.js",
-    "lib/**/*.js.map",
     "lib/**/*.d.ts",
-    "lib/**/*.d.ts.map",
     "src",
     "cordis.patch.yml",
     "assets/whale",
@@ -117,6 +115,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhu1090093659/dsh-pet.git"
+    "url": "https://github.com/DescartHsu/dsh-pet.git"
   }
 }
