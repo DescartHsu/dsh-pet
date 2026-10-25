@@ -263,6 +263,8 @@ ctx.effect(() => ctx.pet.registerPanelAction({
 
 ![鲸鱼娘（红色）](assets/whale-red/previews/idle.gif)
 
+<img src="docs/images/whale-red-panel.png" alt="鲸鱼娘（红色）及配套酒红浮窗，使用演示数据" width="440">
+
 Miku 宠物有意不随包内置：它是 frames2d 玩法宠物，经创意工坊按需安装（见上文 frames2d 一节）。**星夜人偶（Starry Doll）**（Theater-ahyeon 以 CC-BY-NC-SA-4.0 贡献）同样仅经创意工坊分发：sprite2d 哥特星夜人偶，从单张插画抠像后以剪纸变换生成动画（呼吸、蹦跳、挥手、沮丧、review 态放大镜道具），从创意工坊宠物列表安装后落在 `$DSH_HOME/pets/starry-doll/`。**Doro 宠物**（内置）同样是《胜利女神：妮姬》桃乐丝的非官方同人衍生形象；角色及相关权利归 SHIFT UP 所有，素材仅限个人非商业使用——见 THIRD_PARTY_NOTICES.md。
 
 精致版参考了 DreamSkin 的「DeepSeek-鲸鱼娘」主题。历史来源记录标注原主题作者为 `powerdog996`，并标注主题为 MIT：[DreamSkin](https://dreamskin.cc)、[仓库来源记录](https://github.com/zhu1090093659/dsh-web/commit/87edd7ff4800dffd40bc93fb76e4ae450390facd)。此处用于记录素材来源与衍生关系；精致版不表述为原作者的官方作品，也不重新定义原始美术作品的授权范围。

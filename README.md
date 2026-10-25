@@ -263,6 +263,8 @@ Settings > Pet > Status bubbles (`auto` by default, `off` to silence the pet). `
 
 ![鲸鱼娘（红色）](assets/whale-red/previews/idle.gif)
 
+<img src="docs/images/whale-red-panel.png" alt="Whale Girl (Red) with matching burgundy controls; demo data" width="440">
+
 The Miku pet is deliberately not bundled: it is a frames2d gameplay pet installed on demand from the Workshop (see the frames2d section above). The **Starry Doll pet** (星夜人偶, contributed by Theater-ahyeon under CC-BY-NC-SA-4.0) is likewise Workshop-only: a sprite2d gothic starry doll cut out from a single illustration and animated with paper-doll transforms (breath, hop, wave, droop, and a review-state magnifier); install it from the Workshop's pet list and it lands in `$DSH_HOME/pets/starry-doll/`. The **Doro pet** (built in) is likewise unofficial fan artwork derived from Dorothy (*Goddess of Victory: Nikke*); the character and its rights belong to SHIFT UP and the assets are personal non-commercial use only — see THIRD_PARTY_NOTICES.md.
 
 The refined variant references DreamSkin's “DeepSeek-Whale” theme. The historical source record identifies `powerdog996` as the original theme author and marks the theme as MIT: [DreamSkin](https://dreamskin.cc), [repository source record](https://github.com/zhu1090093659/dsh-web/commit/87edd7ff4800dffd40bc93fb76e4ae450390facd). This attribution records the source and derivative relationship; it does not present the refined variant as an official work of the original author or redefine the original artwork's licensing scope.
